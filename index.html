@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <title>Assignment 4</title>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "fWYGi0nfPZSZTk_Pv",
+      });
+   })();
+</script>
+    </head>
+    <body>
+        <nav>
+            <div class="navbar">
+                <img src="resources/css/img/logo.png" alt="logo" class="logo">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#booking-section">Services</a></li>
+                    <li><a href="#hero">About Us</a></li>
+                    <li><a href="#newsletter">Contact Us</a></li>
+                </ul>
+                <div class="username">Hello, Saqib</div>
+                <div class="burger" id="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="sidebar" id="sidebar">
+                <li id="sidebar-links"><a href="#">Home</a></li>
+                <li id="sidebar-links"><a href="#booking-section">Services</a></li>
+                <li id="sidebar-links"><a href="#hero">About Us</a></li>
+                <li id="sidebar-links"><a href="#newsletter">Contact Us</a></li><button></button>
+            </div>
+
+            <div class="overlay" id="overlay"></div>
+        </nav>
+        <section class="hero" id="hero">
+            <div class="hero-left">
+                <h1>Your Trusted Service Partner</h1>
+                <p>
+                We provide top-quality services tailored to your needs. 
+                Book today and let our experts handle the rest while you relax.
+                </p>
+                <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+                Book a Service Today
+                </button>
+            </div>
+
+            <div class="hero-right">
+                <img src="resources/img/hero.png" alt="Services">
+            </div>
+        </section>
+
+        <section class="service-overview">
+            <div class="service-box">
+                <h2>15+</h2>
+                <p>Laundry Services</p>
+            </div>
+            <div class="service-box">
+                <h2>240+</h2>
+                <p>Happy Customers</p>
+            </div>
+            <div class="service-box">
+                <h2>2+</h2>
+                <p>Years of Experience</p>
+            </div>
+        </section>
+
+        <section class="booking-section" id="booking-section">
+            <!-- Left Div -->
+            <div class="services-list">
+                <h2>Our Services</h2>
+                <p class="service-desc">
+                Click On The Add To Cart Button To Add The Services To Your Cart
+                </p>
+
+                <div class="service-item">
+                    <span>Dry Cleaning - <span class="pricing">₹200.00</span></span>
+                    <button class="btn remove-btn">Remove Item <i class="fas fa-minus-circle"></i></button>
+                </div>
+
+                <div class="service-item">
+                    <span>Wash & Fold - <span class="pricing">₹100.00</span></span>
+                    <button class="btn add-btn">Add Item <i class="fas fa-plus-circle"></i></button>
+                </div>
+
+                <div class="service-item">
+                    <span>Ironing - <span class="pricing">₹30.00</span></span>
+                    <button class="btn remove-btn">Remove Item <i class="fas fa-minus-circle"></i></button>
+                </div>
+
+                <div class="service-item">
+                    <span>Stain Removal - <span class="pricing">₹500.00</span></span>
+                    <button class="btn add-btn">Add Item <i class="fas fa-plus-circle"></i></button>
+                </div>
+
+                <div class="service-item">
+                    <span>Leather & Suede Cleaning - <span class="pricing">₹999.00</span></span>
+                    <button class="btn remove-btn">Remove Item <i class="fas fa-minus-circle"></i></button>
+                </div>
+
+                <div class="service-item">
+                    <span>Wedding Dress Cleaning - <span class="pricing">₹2800.00</span></span>
+                    <button class="btn add-btn">Add Item <i class="fas fa-plus-circle"></i></button>
+                </div>
+
+                <p class="info">👉 Add the items to the cart and book now</p>
+            </div>
+
+            <!-- Right Div -->
+            <div class="cart-booking">
+                <div class="cart">
+                    <h3>Added Items</h3>
+                    <table class="styled-table">
+                        <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Dry Cleaning</td>
+                            <td>₹200.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ironing</td>
+                            <td>₹30.00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Leather & Suede Cleaning</td>
+                            <td>₹999.00</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>Total Amount</strong></td>
+                            <td><strong>₹1229.00</strong></td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="booking-form">
+                <h3>Book Now</h3>
+
+                <label for="">Full Name</label>
+                <input type="text" placeholder="John Doe" id="name">
+
+                <div class="row">
+                    <div>
+                        <label for="">Email</label>
+                        <input type="email" id="email" placeholder="mailid@gmail.com">
+                    </div>
+                    <div>
+                        <label for="">Phone Number</label>
+                        <input type="tel" placeholder="+91 XXXXX XXXXX" id="phone">
+                    </div>
+                </div>
+                    <button class="book-btn" id="bookBtn" type="submit">Book Now</button>
+                    <p id="confirmationMessage" class="confirmation-message"></p>
+            </div>
+        </section>
+        <!-- Quality Description Section -->
+        <section class="quality-section">
+            <h2>Why Choose Our Laundry Service?</h2>
+            <div class="qualities">
+                <div class="quality-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Premium Services</h3>
+                    <p>High-quality cleaning with extra care for your clothes.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Quick Support</h3>
+                    <p>Our team is available 24/7 to assist you.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Timely Delivery</h3>
+                    <p>We value your time with fast and reliable delivery.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>Premium quality services at budget-friendly rates.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription Section -->
+        <section class="newsletter" id="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with the latest offers and services!</p>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="resources/css/img/logo.png" alt="Laundry Logo" class="footer-logo">
+                    <p>Your trusted laundry partner.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#newsletter">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-bottom">© 2025 Laundry Service. All rights reserved.</p>
+        </footer>
+        <script src="resources/js/script.js"></script>
+    </body>
+</html>
